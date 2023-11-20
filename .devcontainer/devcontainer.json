@@ -1,0 +1,29 @@
+{
+    "name": "Go-Vue3-Dev-Container",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "service": "server", // 选择作为主服务的服务
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        // 在这里指定 VS Code 扩展
+        "vscode": {
+            "extensions": [
+                "gitlens.gitlens",
+                "mhutchie.git-graph",
+                "golang.go",
+                "esbenp.prettier-vscode",
+                "editorconfig.editorconfig",
+                // 选择 Vetur 或 Volar
+                "octref.vetur"
+                // "johnsoncodehk.volar"
+            ]
+        },
+        // VS Code 设置
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/bash",
+            "editor.formatOnSave": true
+            // 其他设置
+        },
+    },
+    // 容器创建后运行的命令
+    "postCreateCommand": "echo 'Container is ready!'"
+}

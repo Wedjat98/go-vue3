@@ -12,5 +12,6 @@ services:
       context: ./dockers/server
     ports:
       - "18080:8080"  # 后端端口
-    environment:
+    env_file:
+      - .env/.server
 
