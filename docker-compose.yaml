@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./dockers/app
+    ports:
+      - "13030:3030"  # 前端端口
+
+  server:
+    build:
+      context: ./dockers/server
+    ports:
+      - "18080:8080"  # 后端端口
+    environment:
+
