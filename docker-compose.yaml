@@ -1,17 +1,18 @@
 version: '3.8'
 
 services:
-  app:
-    build:
-      context: ./dockers/app
-    ports:
-      - "13030:3030"  # 前端端口
+  # app:
+  #   build:
+  #     context: .
+  #     dockerfile: ./dockers/app/Dockerfile
+  #   ports:
+  #     - "13030:3030"
 
   server:
     build:
-      context: ./dockers/server
+      context: .
+      dockerfile: ./dockers/server/Dockerfile
     ports:
-      - "18080:8080"  # 后端端口
+      - "18080:8080"
     env_file:
       - .env/.server
-
