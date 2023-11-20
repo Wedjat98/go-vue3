@@ -5,8 +5,8 @@ FROM golang:1.16
 WORKDIR /backend
 
 # 复制 Go 模块和依赖项
-COPY go.mod ./
-COPY go.sum ./
+COPY go.mod /backend/
+COPY go.sum /backend/
 RUN go mod download
 
 # 复制源代码
